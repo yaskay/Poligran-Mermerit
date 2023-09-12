@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+
+  <title>Poligran Mermerit | Anasayfa</title>
+</head>
+
+<body class="overflow-hidden bg-body-tertiary">
+
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loading-spinner spinner-border" role="status">
+      <span class="visually-hidden">Yükleniyor...</span>
+    </div>
+    <h3>Yükleniyor...</h3>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-md fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-none d-md-flex mx-auto" href="index.html">
+        <img src="..." alt="navbar logo" class="navbar-logo w-75">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Poligran Mermerit</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav nav-underline ms-auto gap-1">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ürünlerimiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Referanslarımız</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="iletisim.html">İletişim</a>
+            </li>
+          </ul>
+          <div class="d-none d-md-flex align-items-center gap-3 ms-2">
+            <div class="vr"></div>
+            <i class="theme-icon fs-5 bi" role="button"></i>
+          </div>
+        </div>
+      </div>
+      <a class="navbar-brand d-flex d-md-none" href="index.html">
+        <img src="..." alt="navbar logo" width="180" class="navbar-logo mx-auto">
+      </a>
+      <div class="d-flex d-md-none align-items-center gap-3">
+        <div class="vr"></div>
+        <i class="theme-icon fs-4 bi" role="button"></i>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div class="carousel slide" id="productCarousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" aria-label="Slide 1"
+        aria-current="true" class="active"></button>
+      <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="4000">
+        <div class="overlay-image" style="background-image: url(slayt/slayt1.jpg);"></div>
+        <div class="carousel-caption">
+          <h1 class="carousel-caption-text">
+            <span class="text-orange">Poligran</span> Mermerit
+          </h1>
+          <p class="carousel-caption-subtext">
+            Birbirinden Şık ve Modern Seçenekler
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <div class="overlay-image" style="background-image: url(slayt/slayt2.jpg);"></div>
+        <div class="carousel-caption">
+          <h3 class="carousel-caption-text">
+            İstediğiniz <span class="text-orange">Renk ve Dokuda</span> Üretim
+          </h3>
+          <p class="carousel-caption-subtext">
+            Yüzlerce Renk ve Modelde Mutfağınızı Yeniden Tasarlıyoruz
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <div class="overlay-image" style="background-image: url(slayt/slayt3.jpg);"></div>
+        <div class="carousel-caption text-white">
+          <h1 class="carousel-caption-text">
+            Ücretsiz <span class="text-orange">Keşif ve Montaj</span> Hizmeti
+          </h1>
+          <p class="carousel-caption-subtext">
+            Ücretsiz Keşif, Fiyatlandırma ve Montaj Hizmeti Sunmaktayız
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Geri ve İleri butonları -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+      <i class="bi bi-arrow-left" aria-hidden="true"></i>
+      <span class="visually-hidden">Önceki</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+      <i class="bi bi-arrow-right" aria-hidden="true"></i>
+      <span class="visually-hidden">Sonraki</span>
+    </button>
+  </div>
+
+
+  <!-- İçerik -->
+  <div style="height: 500px;">
+    <p>asdasda</p>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-secondary-subtle">
+    <div class="container pt-3 pb-3 pb-md-2 pt-md-4">
+      <div class="row justify-content-around align-items-center text-center">
+        <div class="col-12 col-md-2">
+          <img src="..." alt="footer logo" class="footer-logo w-100">
+        </div>
+        <hr class="my-3 d-md-none">
+        <div class="col-6 col-md-2">
+          <h5 class="text-orange">Sayfalar</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="/index.html" class="nav-link link-secondary-emphasis p-0">Ana Sayfa</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="/hakkimizda.html" class="nav-link link-secondary-emphasis p-0">Referanslarımız</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="/hakkimizda.html" class="nav-link link-secondary-emphasis p-0">Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a href="/iletisim.html" class="nav-link link-secondary-emphasis p-0">İletişim</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2">
+          <h5 class="text-orange">Ürünlerimiz</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="/index.html" class="nav-link link-secondary-emphasis p-0">Ana Sayfa</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="/hakkimizda.html" class="nav-link link-secondary-emphasis p-0">Referanslarımız</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="/hakkimizda.html" class="nav-link link-secondary-emphasis p-0">Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a href="/iletisim.html" class="nav-link link-secondary-emphasis p-0">İletişim</a>
+            </li>
+          </ul>
+        </div>
+        <hr class="my-3 d-md-none">
+        <div class="col-12 col-md-3 col-lg-3">
+          <h5 class="text-orange">İletişim</h5>
+          <ul class="nav flex-column text-secondary-emphasis">
+            <li class="mb-2">
+              <span class="p-0">
+                Hacı Halil Mah. Adliye Cd. Can Apt. Kat:4, 41400 Gebze/Kocaeli
+              </span>
+            </li>
+            <li class="nav-item mb-2">
+              <span class="p-0">info@kapsikoterapi.com</span>
+            </li>
+            <li class="nav-item">
+              <span class="p-0">+90 506 777 90 06</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="mb-1">
+      <div class="row">
+        <div class="col-12 col-md-9 align-self-center text-center text-md-start order-last order-md-first">
+          <span class="fw-semibold text-secondary-emphasis">© 2023 Poligran Mermerit. Tüm hakları saklıdır.</span>
+        </div>
+        <div class="col-12 col-md-3">
+          <ul class="social-media-list">
+            <li>
+              <a class="link-orange" href="https://www.facebook.com/Kapsikoterapi/">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a class="link-orange" href="https://www.instagram.com/kapsikoterapi/?hl=tr">
+                <i class="bi bi-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a class="link-orange" href="https://www.instagram.com/kapsikoterapi/?hl=tr">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
