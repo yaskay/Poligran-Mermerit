@@ -317,6 +317,14 @@ footer ul.social-media-list {
   border: 0;
 }
 
+.hover-scale {
+  transition: all 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
 /* Dark Theme Start */
 [data-bs-theme=dark] {
   .text-orange {
