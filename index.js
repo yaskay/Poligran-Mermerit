@@ -1,8 +1,8 @@
-const whiteHorizontolLogo = "images/white_horizontol_logo.png";
-const blackHorizontolLogo = "images/black_horizontol_logo.png";
+const whiteHorizontalLogo = "logo/white_horizontal_logo.png";
+const blackHorizontalLogo = "logo/black_horizontal_logo.png";
 
-const whiteVerticalLogo = "images/white_horizontol_logo.png";
-const blackVerticalLogo = "images/black_horizontol_logo.png";
+const whiteVerticalLogo = "logo/white_vertical_logo.png";
+const blackVerticalLogo = "logo/test.png";
 
 const lightIcon = "bi-moon-fill";
 const darkIcon = "bi-brightness-high-fill";
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   navbar.classList.add("navbar-no-bg");
 
   // Navbar logolarını başlangıç için beyaz yap.
-  navbarLogos.forEach((logo) => logo.src = whiteHorizontolLogo);
+  navbarLogos.forEach((logo) => logo.src = whiteHorizontalLogo);
 
   // Footer logosunu set et
   footerLogo.src = storedTheme === "light" ? blackVerticalLogo : whiteVerticalLogo;
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Scroll yapılmışsa ve gerçek navbar gözüküyorsa navbar logolarını güncelle.
         if (window.scrollY > navbarScrollYMax) {
-          navbarLogos.forEach((logo) => logo.src = whiteHorizontolLogo);
+          navbarLogos.forEach((logo) => logo.src = whiteHorizontalLogo);
         }
 
       } else {
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Scroll yapılmışsa ve gerçek navbar gözüküyorsa navbar logolarını güncelle.
         if (window.scrollY > navbarScrollYMax) {
-          navbarLogos.forEach((logo) => logo.src = blackHorizontolLogo);
+          navbarLogos.forEach((logo) => logo.src = blackHorizontalLogo);
         }
       }
     });
@@ -97,9 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
       navbar.classList.add("bg-secondary-subtle");
 
       if (currentTheme === "dark")
-        navbarLogos.forEach((logo) => logo.src = whiteHorizontolLogo);
+        navbarLogos.forEach((logo) => logo.src = whiteHorizontalLogo);
       else
-        navbarLogos.forEach((logo) => logo.src = blackHorizontolLogo);
+        navbarLogos.forEach((logo) => logo.src = blackHorizontalLogo);
     }
     else if (window.scrollY <= navbarScrollYMax && !hasScrolledUp) {
       hasScrolledUp = true;
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       navbar.classList.remove("bg-secondary-subtle");
       navbar.classList.add("navbar-no-bg");
-      navbarLogos.forEach((logo) => logo.src = whiteHorizontolLogo);
+      navbarLogos.forEach((logo) => logo.src = whiteHorizontalLogo);
     }
   });
 });

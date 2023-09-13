@@ -1,13 +1,11 @@
-const whiteHorizontolLogo = "images/white_horizontol_logo.png";
-const blackHorizontolLogo = "images/black_horizontol_logo.png";
+const whiteHorizontalLogo = "logo/white_horizontal_logo.png";
+const blackHorizontalLogo = "logo/black_horizontal_logo.png";
 
-const whiteVerticalLogo = "images/white_horizontol_logo.png";
-const blackVerticalLogo = "images/black_horizontol_logo.png";
+const whiteVerticalLogo = "logo/white_vertical_logo.png";
+const blackVerticalLogo = "logo/black_vertical_logo.png";
 
 const lightIcon = "bi-moon-fill";
 const darkIcon = "bi-brightness-high-fill";
-
-const navbarScrollYMax = 150;
 
 // Sayfanın tamamen hazır hale gelmesini bekle.
 // HTML, CSS ve javascript dosyaları indirilip işlenmeli ve sayfa son haline gelmeli.
@@ -27,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const storedTheme = localStorage.getItem("theme") || "light";
   htmlElement.setAttribute("data-bs-theme", storedTheme);
 
-  // Navbar logolarını başlangıç için beyaz yap.
-  navbarLogos.forEach((logo) => logo.src = whiteHorizontolLogo);
+  // Navbar logosunu set et.
+  navbarLogos.forEach((logo) => logo.src = storedTheme === "light" ? blackHorizontalLogo : whiteHorizontalLogo);
 
-  // Footer logosunu set et
+  // Footer logosunu set et.
   footerLogo.src = storedTheme === "light" ? blackVerticalLogo : whiteVerticalLogo;
 
   // Tema ikonları başlagıç için set et.
@@ -60,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         footerLogo.src = whiteVerticalLogo;
 
         // Navbar'ın logolarını güncelle.
-        navbarLogos.forEach((logo) => logo.src = whiteHorizontolLogo);
+        navbarLogos.forEach((logo) => logo.src = whiteHorizontalLogo);
       } else {
         // İkonun class'ını güncelle.
         icon.classList.remove(darkIcon);
@@ -70,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         footerLogo.src = blackVerticalLogo;
 
         // Navbar'ın logolarını güncelle.
-        navbarLogos.forEach((logo) => logo.src = blackHorizontolLogo);
+        navbarLogos.forEach((logo) => logo.src = blackHorizontalLogo);
       }
     });
   });
