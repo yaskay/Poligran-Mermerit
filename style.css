@@ -249,6 +249,7 @@ footer ul.social-media-list {
   }
 }
 
+/* Section */
 .section-header {
   display: inline-block;
 
@@ -313,10 +314,16 @@ footer ul.social-media-list {
   }
 }
 
+.section-container-margin {
+  margin-top: 6vh;
+  margin-bottom: 10vh;
+}
+
 .google-map {
   border: 0;
 }
 
+/* Hover */
 .hover-scale {
   transition: all 0.2s ease;
 }
