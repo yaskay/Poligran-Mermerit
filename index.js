@@ -2,7 +2,7 @@ const whiteHorizontalLogo = "logo/white_horizontal_logo.png";
 const blackHorizontalLogo = "logo/black_horizontal_logo.png";
 
 const whiteVerticalLogo = "logo/white_vertical_logo.png";
-const blackVerticalLogo = "logo/test.png";
+const blackVerticalLogo = "logo/black_vertical_logo.png";
 
 const lightIcon = "bi-moon-fill";
 const darkIcon = "bi-brightness-high-fill";
