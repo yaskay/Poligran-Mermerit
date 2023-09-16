@@ -42,6 +42,10 @@
   color: var(--orange-dark);
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .link-orange {
   color: var(--orange-dark);
 
