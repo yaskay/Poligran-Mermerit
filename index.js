@@ -1,7 +1,9 @@
 const whiteHorizontalLogo = "logo/white_horizontal_logo.png";
+
+const grayHorizontalLogo = "logo/gray_horizontal_logo.png";
 const blackHorizontalLogo = "logo/black_horizontal_logo.png";
 
-const whiteVerticalLogo = "logo/white_vertical_logo.png";
+const grayVerticalLogo = "logo/gray_vertical_logo.png";
 const blackVerticalLogo = "logo/black_vertical_logo.png";
 
 const lightIcon = "bi-moon-fill";
@@ -35,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   navbarLogos.forEach((logo) => logo.src = whiteHorizontalLogo);
 
   // Footer logosunu set et
-  footerLogo.src = storedTheme === "light" ? blackVerticalLogo : whiteVerticalLogo;
+  footerLogo.src = storedTheme === "light" ? blackVerticalLogo : grayVerticalLogo;
 
   // Tema ikonları başlagıç için set et.
   themeIcons.forEach((icon) => {
@@ -61,11 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.classList.add(darkIcon);
 
         // Footer'ın logosunu güncelle.
-        footerLogo.src = whiteVerticalLogo;
+        footerLogo.src = grayVerticalLogo;
 
         // Scroll yapılmışsa ve gerçek navbar gözüküyorsa navbar logolarını güncelle.
         if (window.scrollY > navbarScrollYMax) {
-          navbarLogos.forEach((logo) => logo.src = whiteHorizontalLogo);
+          navbarLogos.forEach((logo) => logo.src = grayHorizontalLogo);
         }
 
       } else {
@@ -88,6 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let hasScrolledDown = false; // Aşağı kaydırıldığını izlemek için bir değişken
   let hasScrolledUp = false; // Yukarı kaydırıldığını izlemek için bir değişken
   window.addEventListener("scroll", () => {
+
+    // Scroll yapılmışsa ve gerçek navbar gözüküyorsa navbar logolarını güncelle.
     if (window.scrollY > navbarScrollYMax && !hasScrolledDown) {
       hasScrolledDown = true;
       hasScrolledUp = false;
@@ -97,10 +101,12 @@ document.addEventListener("DOMContentLoaded", () => {
       navbar.classList.add("bg-secondary-subtle");
 
       if (currentTheme === "dark")
-        navbarLogos.forEach((logo) => logo.src = whiteHorizontalLogo);
+        navbarLogos.forEach((logo) => logo.src = grayHorizontalLogo);
       else
         navbarLogos.forEach((logo) => logo.src = blackHorizontalLogo);
     }
+
+    // Sayfa başına gelindiyse, yani navbar şeffaf ise.
     else if (window.scrollY <= navbarScrollYMax && !hasScrolledUp) {
       hasScrolledUp = true;
       hasScrolledDown = false;

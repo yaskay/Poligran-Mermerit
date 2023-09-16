@@ -1,7 +1,7 @@
-const whiteHorizontalLogo = "logo/white_horizontal_logo.png";
+const grayHorizontalLogo = "logo/gray_horizontal_logo.png";
 const blackHorizontalLogo = "logo/black_horizontal_logo.png";
 
-const whiteVerticalLogo = "logo/white_vertical_logo.png";
+const grayVerticalLogo = "logo/gray_vertical_logo.png";
 const blackVerticalLogo = "logo/black_vertical_logo.png";
 
 const lightIcon = "bi-moon-fill";
@@ -25,11 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const storedTheme = localStorage.getItem("theme") || "light";
   htmlElement.setAttribute("data-bs-theme", storedTheme);
 
-  // Navbar logosunu set et.
-  navbarLogos.forEach((logo) => logo.src = storedTheme === "light" ? blackHorizontalLogo : whiteHorizontalLogo);
+  // Navbar logolarını set et.
+  navbarLogos.forEach((logo) => logo.src = storedTheme === "light" ? blackHorizontalLogo : grayHorizontalLogo);
 
   // Footer logosunu set et.
-  footerLogo.src = storedTheme === "light" ? blackVerticalLogo : whiteVerticalLogo;
+  footerLogo.src = storedTheme === "light" ? blackVerticalLogo : grayVerticalLogo;
 
   // Tema ikonları başlagıç için set et.
   themeIcons.forEach((icon) => {
@@ -55,10 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.classList.add(darkIcon);
 
         // Footer'ın logosunu güncelle.
-        footerLogo.src = whiteVerticalLogo;
+        footerLogo.src = grayVerticalLogo;
 
         // Navbar'ın logolarını güncelle.
-        navbarLogos.forEach((logo) => logo.src = whiteHorizontalLogo);
+        navbarLogos.forEach((logo) => logo.src = grayHorizontalLogo);
       } else {
         // İkonun class'ını güncelle.
         icon.classList.remove(darkIcon);
